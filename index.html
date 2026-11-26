@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soni Divy — Digital Marketer for Local Brands</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f3ec;--surface:#ffffff;--ink:#0d0d10;--muted:#595962;--line:#dedbd0;--accent:#d6ff3d;--accent-ink:#0d0d10;--r:22px;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0b0d;--surface:#15151a;--ink:#f3f3ef;--muted:#9c9ca8;--line:#26262d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b0b0d;--surface:#15151a;--ink:#f3f3ef;--muted:#9c9ca8;--line:#26262d;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.num{font-family:"Space Grotesk",Inter,system-ui,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:620px;margin:0 0 36px}
+mark{background:var(--accent);color:var(--accent-ink);padding:0 .15em;border-radius:8px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",sans-serif;font-weight:700;text-decoration:none}
+.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-style:normal;font-size:14px}
+.links{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.links .btn{padding:10px 20px;color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:48px 0 40px}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.9rem)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:560px;margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.card-hero{position:relative;background:var(--accent);color:var(--accent-ink);border-radius:34px;aspect-ratio:4/5;transform:rotate(2.5deg);overflow:hidden;box-shadow:0 24px 60px -24px rgba(0,0,0,.45)}
+.card-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.card-hero .tags{position:absolute;top:18px;left:18px;right:18px}
+.card-hero .name{position:absolute;left:0;right:0;bottom:0;padding:56px 22px 20px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;line-height:1.3}
+.card-hero .name b{font:700 1.4rem "Space Grotesk",sans-serif;display:block}
+.shot{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#0b0d10}
+.shot::before{content:"";display:block;height:26px;background:radial-gradient(circle at 16px 13px,#ff5f57 4px,transparent 4.5px),radial-gradient(circle at 32px 13px,#febc2e 4px,transparent 4.5px),radial-gradient(circle at 48px 13px,#28c840 4px,transparent 4.5px),#15171b}
+.shot img{display:block;width:100%;height:auto}
+.band .shot{grid-column:1/-1}
+.band .shot img{height:300px;object-fit:cover;object-position:top}
+.card-hero .big{font:700 clamp(5rem,12vw,8.5rem)/.9 "Space Grotesk",sans-serif;letter-spacing:-.06em}
+.card-hero small{font-weight:600;font-size:14px;line-height:1.4;display:block}
+.chip{display:inline-block;background:var(--ink);color:var(--bg);font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;margin:0 6px 6px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.stat .num{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+.stat span{display:block;color:var(--muted);font-size:14px;margin-top:6px}
+
+/* cases */
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:16px;transition:transform .25s,border-color .25s}
+.case:hover{transform:translateY(-4px);border-color:var(--ink)}
+.case .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);font-weight:600}
+.case .idx{font:700 14px "Space Grotesk",sans-serif;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:4px 12px}
+.case h3{font-size:1.7rem}
+.label{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.case p{margin:0}
+.case ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.case li::marker{color:var(--muted)}
+.result{margin-top:auto;border-top:1px dashed var(--line);padding-top:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.result .num{font-size:2.6rem;font-weight:700;background:var(--accent);color:var(--accent-ink);border-radius:14px;padding:4px 14px}
+.result b{display:block;font-size:15px}
+.result small{color:var(--muted)}
+
+/* community */
+.band{background:var(--ink);color:var(--bg);border-radius:34px;padding:44px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+.band h2{margin-bottom:10px}
+.band p{margin:0;opacity:.78;max-width:560px}
+.band .num{font-size:clamp(3rem,7vw,5rem);font-weight:700;color:var(--accent);text-align:right}
+.band small{display:block;text-align:right;opacity:.7}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.svc{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);padding:24px}
+.svc h3{font-size:1.2rem;margin:10px 0 6px}
+.svc p{margin:0;color:var(--muted);font-size:15px}
+.svc .n{font:700 13px "Space Grotesk",sans-serif;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.step{border-radius:var(--r);padding:24px;border:1.5px solid var(--ink)}
+.step:nth-child(2){background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.step:nth-child(3){background:var(--ink);color:var(--bg)}
+.step h3{font-size:1.5rem;margin-bottom:6px}
+.step p{margin:0;font-size:15px;opacity:.85}
+
+/* about + contact */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about p{color:var(--muted);margin:0 0 14px}
+.contact{text-align:center;background:var(--accent);color:var(--accent-ink);border-radius:40px;padding:64px 24px}
+.contact h2{font-size:clamp(2.2rem,6vw,4.2rem);max-width:760px;margin:0 auto 16px}
+.contact p{margin:0 auto 28px;max-width:520px}
+.contact .btn{background:var(--accent-ink);color:var(--accent);border-color:var(--accent-ink)}
+footer{padding:28px 0 36px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:860px){
+ .hero,.about,.band{grid-template-columns:1fr}
+ .card-hero{max-width:420px;width:100%;transform:none}
+ .cases,.services,.steps{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr}
+ .links a:not(.btn){display:none}
+ .band .num,.band small{text-align:left}
+ .band{padding:30px}
+ section{padding:52px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <nav>
+  <a class="logo" href="#top"><i>SD</i>Soni Divy</a>
+  <div class="links">
+   <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a>
+   <a class="btn" href="#contact">Let’s talk</a>
+  </div>
+ </nav>
+
+ <header class="hero" id="top">
+  <div>
+   <span class="eyebrow">Digital marketer · Anand &amp; Ahmedabad</span>
+   <h1>I turn local stores into <mark>customer magnets</mark>.</h1>
+   <p>Instagram, Google Business Profile and WhatsApp growth for salons, boutiques and local brands across Gujarat. I care about people walking through your door, not just views on a reel.</p>
+   <div class="cta">
+    <a class="btn primary" href="#work">See my work →</a>
+    <a class="btn" href="#contact">Work with me</a>
+   </div>
+  </div>
+  <div class="card-hero">
+   <img src="assets/soni-divy.jpg" alt="Portrait of Soni Divy">
+   <div class="tags"><span class="chip">Instagram</span><span class="chip">Google Business</span><span class="chip">WhatsApp</span></div>
+   <div class="name"><b>Soni Divy</b>Divy Business Consulting</div>
+  </div>
+ </header>
+
+ <div class="stats">
+  <div class="stat"><div class="num">500%</div><span>Follower growth for Bollywood Salon with one QR code</span></div>
+  <div class="stat"><div class="num">8M+</div><span>Views on the top reel of a 365-day creator challenge I plan content for</span></div>
+  <div class="stat"><div class="num">478K</div><span>Community I help serve as part of the Amazing Bharuch team</span></div>
+ </div>
+
+ <section id="work">
+  <span class="eyebrow">Selected work</span>
+  <h2>Different stores, different problems.</h2>
+  <p class="lead">Every business gets a plan built around what it actually needs, whether that’s followers, footfall, awareness or consistency.</p>
+
+  <div class="cases">
+   <article class="case">
+    <div class="top"><span>Salon · Anand</span><span class="idx">01</span></div>
+    <figure class="shot"><img src="assets/bollywood-salon.jpg" alt="Bollywood Salon Instagram profile" loading="lazy"></figure>
+    <h3>Bollywood Salon</h3>
+    <div><div class="label">The problem</div><p>The salon wanted more Instagram followers, and an easy way to turn them into bookings.</p></div>
+    <div><div class="label">What I did</div>
+     <ul>
+      <li>Placed a QR code in the store so every customer who visits follows the page</li>
+      <li>The team posts their own content; I run the comment-to-book method for appointments</li>
+      <li>“Comment HAIR” on a reel and people get the price and store details</li>
+      <li>Improved their Google Business Profile local ranking from 20th to 5th</li>
+     </ul>
+    </div>
+    <div class="result"><span class="num">500%</span><div><b>Follower growth</b><small>Now 11.8K followers on Instagram</small></div></div>
+   </article>
+
+   <article class="case">
+    <div class="top"><span>Perfumes, jewellery &amp; clothing · Anand</span><span class="idx">02</span></div>
+    <figure class="shot"><img src="assets/perfume-vault.jpg" alt="The Perfume Vault Instagram profile with reels" loading="lazy"></figure>
+    <h3>The Perfume Vault</h3>
+    <div><div class="label">The problem</div><p>A new luxury store that wanted influencer marketing to get people to walk in.</p></div>
+    <div><div class="label">What I did</div>
+     <ul>
+      <li>Planned the full influencer campaign for the store</li>
+      <li>Found and matched the right local influencer</li>
+      <li>Wrote the reel scripts so the content sells, not just entertains</li>
+     </ul>
+    </div>
+    <div class="result"><span class="num">328K</span><div><b>Views on the top reel</b><small>Another reel at 109K</small></div></div>
+   </article>
+
+   <article class="case">
+    <div class="top"><span>Pool &amp; snooker club · Ankleshwar</span><span class="idx">03</span></div>
+    <figure class="shot"><img src="assets/8th-cue.jpg" alt="8th Cue Instagram profile with reels" loading="lazy"></figure>
+    <h3>8th Cue</h3>
+    <div><div class="label">The problem</div><p>A brand-new club with a brand-new Instagram page. Nobody knew it existed yet.</p></div>
+    <div><div class="label">What I did</div>
+     <ul>
+      <li>I run the whole page: strategy, reels and daily content planning</li>
+      <li>Reels shot around the location and the people who play there</li>
+      <li>Consistent posting so the page builds momentum from day one</li>
+     </ul>
+    </div>
+    <div class="result"><span class="num">32.5K</span><div><b>Views on the top reel</b><small>Page is just getting started</small></div></div>
+   </article>
+
+   <article class="case">
+    <div class="top"><span>Creator · Jainil Vyas</span><span class="idx">04</span></div>
+    <figure class="shot"><img src="assets/jainil-vyas.jpg" alt="Jainil Vyas Instagram reels with millions of views" loading="lazy"></figure>
+    <h3>365-Day Reel Challenge</h3>
+    <div><div class="label">The problem</div><p>My best friend committed to one reel every day for 365 days. The hard part is never running out of ideas.</p></div>
+    <div><div class="label">What I did</div>
+     <ul>
+      <li>Plan the daily reel ideas and hooks</li>
+      <li>Relatable, repeatable formats that people share</li>
+      <li>Keep the content flowing without burning him out</li>
+     </ul>
+    </div>
+    <div class="result"><span class="num">8M</span><div><b>Views on the top reel</b><small>Also 4.7M and 4.6M on two others</small></div></div>
+   </article>
+  </div>
+ </section>
+
+ <section style="padding-top:0">
+  <div class="band">
+   <div>
+    <span class="eyebrow" style="color:var(--accent)">Community</span>
+    <h2>Part of the Amazing Bharuch team</h2>
+    <p>I’m a member of the team behind Amazing Bharuch, a verified local page for updates, festivals and people’s stories, serving Bharuch since 2016.</p>
+   </div>
+   <div><div class="num">478K</div><small>followers</small></div>
+   <figure class="shot"><img src="assets/amazing-bharuch.jpg" alt="Amazing Bharuch Instagram profile" loading="lazy"></figure>
+  </div>
+ </section>
+
+ <section id="services">
+  <span class="eyebrow">Services</span>
+  <h2>What I can do for your business.</h2>
+  <p class="lead">Pick one, or let me run the full growth system.</p>
+  <div class="services">
+   <div class="svc"><span class="n">01</span><h3>Google Business Profile</h3><p>Optimization that moves you up in local search, so nearby customers find you first.</p></div>
+   <div class="svc"><span class="n">02</span><h3>Instagram content &amp; ads</h3><p>Reels and paid ads planned around your location, your people and your offers.</p></div>
+   <div class="svc"><span class="n">03</span><h3>WhatsApp marketing</h3><p>Turn enquiries into bookings and bring past customers back.</p></div>
+   <div class="svc"><span class="n">04</span><h3>Review generation</h3><p>QR-based systems that turn happy customers into 5-star reviews and new followers.</p></div>
+   <div class="svc"><span class="n">05</span><h3>Sales training</h3><p>Help your team convert walk-ins and enquiries into paying customers.</p></div>
+   <div class="svc"><span class="n">06</span><h3>Offer creation</h3><p>Offers that are simple to say, easy to say yes to and good for your margins.</p></div>
+  </div>
+  <div class="steps">
+   <div class="step"><h3>Visible</h3><p>Get found on Google and Instagram by people already looking for you.</p></div>
+   <div class="step"><h3>Booked</h3><p>Turn that attention into appointments, enquiries and walk-ins.</p></div>
+   <div class="step"><h3>Dominate</h3><p>Become the first name people think of in your area.</p></div>
+  </div>
+ </section>
+
+ <section id="about" style="padding-top:0">
+  <div class="about">
+   <div>
+    <span class="eyebrow">About</span>
+    <h2>Views don’t pay rent. Customers do.</h2>
+   </div>
+   <div>
+    <p>I’m Soni Divy, a solo digital marketing and business consultant working under Divy Business Consulting, based between Anand and Ahmedabad.</p>
+    <p>I started from zero revenue with two salon clients and built every system by testing it in real stores. Today I help salons, boutiques and local brands get real customers with simple ideas that actually work, like a QR code at the counter or a single comment keyword.</p>
+   </div>
+  </div>
+ </section>
+
+ <section id="contact" style="padding-top:0">
+  <div class="contact">
+   <h2>Got a store that needs more customers?</h2>
+   <p>Tell me what’s not working and I’ll plan the fix.</p>
+   <!-- Add a WhatsApp or email button here: <a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a> -->
+   <a class="btn" href="https://www.instagram.com/divy_pvt_12/" target="_blank" rel="noopener">Message me on Instagram →</a>
+  </div>
+ </section>
+
+ <footer><span>© 2026 Soni Divy · Divy Business Consulting</span><span>Anand &amp; Ahmedabad, Gujarat</span></footer>
+</div>
+</body>
+</html>
